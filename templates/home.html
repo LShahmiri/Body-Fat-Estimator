@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<title>Body Fat AI Predictor</title>
+
+<style>
+
+body{
+height:100vh;
+background:linear-gradient(135deg,#667eea,#764ba2);
+font-family: 'Segoe UI', sans-serif;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.card{
+width:600px;
+padding:40px;
+border-radius:20px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(12px);
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+color:white;
+}
+
+.title{
+text-align:center;
+margin-bottom:25px;
+font-weight:600;
+}
+
+.form-control{
+border-radius:10px;
+border:none;
+padding:12px;
+}
+
+.form-control:focus{
+box-shadow:none;
+}
+
+.btn-predict{
+width:100%;
+margin-top:15px;
+padding:12px;
+border-radius:10px;
+font-size:18px;
+background:#00c6ff;
+border:none;
+transition:0.3s;
+}
+
+.btn-predict:hover{
+background:#0096c7;
+transform:scale(1.03);
+}
+
+.input-group-text{
+background:white;
+border:none;
+}
+
+.subtitle{
+text-align:center;
+font-size:14px;
+opacity:0.85;
+margin-bottom:25px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2 class="title">
+<i class="fa-solid fa-heart-pulse"></i>
+Body Fat Predictor
+</h2>
+
+<p class="subtitle">
+Machine Learning powered body fat estimation
+</p>
+
+<form action="/" method="POST">
+
+<div class="input-group mb-3">
+<span class="input-group-text"><i class="fa-solid fa-water"></i></span>
+<input type="number" step="any" class="form-control" name="density" placeholder="Density">
+</div>
+
+<div class="input-group mb-3">
+<span class="input-group-text"><i class="fa-solid fa-ruler"></i></span>
+<input type="number" step="any" class="form-control" name="abdomen" placeholder="Abdomen (cm)">
+</div>
+
+<div class="input-group mb-3">
+<span class="input-group-text"><i class="fa-solid fa-person"></i></span>
+<input type="number" step="any" class="form-control" name="chest" placeholder="Chest (cm)">
+</div>
+
+<div class="input-group mb-3">
+<span class="input-group-text"><i class="fa-solid fa-weight-scale"></i></span>
+<input type="number" step="any" class="form-control" name="weight" placeholder="Weight (lbs)">
+</div>
+
+<div class="input-group mb-3">
+<span class="input-group-text"><i class="fa-solid fa-arrows-left-right"></i></span>
+<input type="number" step="any" class="form-control" name="hip" placeholder="Hip (cm)">
+</div>
+
+<button class="btn btn-predict">
+<i class="fa-solid fa-brain"></i>
+Predict Body Fat
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

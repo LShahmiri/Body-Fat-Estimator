@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<title>Body Fat Result</title>
+
+<style>
+
+body{
+background: linear-gradient(135deg,#667eea,#764ba2);
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+font-family:Segoe UI;
+}
+
+.result-card{
+width:750px;
+padding:40px;
+border-radius:20px;
+background:white;
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+.result-number{
+font-size:60px;
+font-weight:bold;
+color:#6f42c1;
+}
+
+.title{
+text-align:center;
+margin-bottom:20px;
+}
+
+.back-btn{
+width:200px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="result-card">
+
+<h2 class="title">
+<i class="fa-solid fa-heart-pulse"></i>
+Body Fat Prediction
+</h2>
+
+<div class="text-center mb-4">
+
+<div class="result-number">
+{{string}}
+</div>
+
+<p class="text-muted">
+Estimated body fat percentage using a machine learning regression model
+</p>
+
+</div>
+
+<div class="text-center mb-4">
+<a href="/">
+<button class="btn btn-primary back-btn">
+<i class="fa-solid fa-arrow-left"></i> Go Back
+</button>
+</a>
+</div>
+
+<hr>
+
+<h5 class="mt-4 mb-3">About This Estimation</h5>
+
+<div class="accordion" id="infoAccordion">
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+Dataset Overview
+</button>
+</h2>
+
+<div id="collapseOne" class="accordion-collapse collapse show">
+<div class="accordion-body">
+
+<p>
+This web application is based on the <b>Body Fat Dataset</b>, which contains
+anthropometric measurements collected from adult male subjects.
+The dataset includes body density values measured through underwater
+weighing together with several body circumference variables such as
+chest, abdomen and hip.
+</p>
+
+<p>
+Body fat percentage can be derived from body density using
+<b>Siri's equation (1956)</b>:
+</p>
+
+<p style="text-align:center">
+<b>Body Fat % = 495 / Density − 450</b>
+</p>
+
+<p>
+In this project, a machine learning regression model was trained to
+estimate body fat percentage using selected body measurements that are
+easy to obtain in real-world health or fitness environments.
+</p>
+
+</div>
+</div>
+
+</div>
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+Dataset Source
+</button>
+</h2>
+
+<div id="collapseTwo" class="accordion-collapse collapse">
+<div class="accordion-body">
+
+<p>
+The dataset was originally compiled and distributed by:
+</p>
+
+<p>
+Roger W. Johnson<br>
+Department of Mathematics and Computer Science<br>
+South Dakota School of Mines and Technology
+</p>
+
+<p>
+This project uses the dataset for educational and demonstration purposes.
+The prediction results should not be considered a medical diagnosis.
+</p>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
