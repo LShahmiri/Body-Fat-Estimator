@@ -54,3 +54,4 @@ for estimating body fat percentage interactively.
 
 This project is intended for **educational and demonstration purposes only**.
 The predicted values should not be considered a medical diagnosis.
+Commit changes
